@@ -1,16 +1,10 @@
-def is_perfect_square(n):
-    square_root = n ** 0.5
-    return square_root == int(square_root)
-
-def main():
-    try:
-        number = int(input("Enter any integer: "))
-        if is_perfect_square(number):
-            print("Yes")
-        else:
-            print("No")
-    except ValueError:
-        print("Invalid input. Please enter a valid integer.")
-
-if __name__ == "__main__":
-    main()
+num = int(input("Enter a number: "))
+perfectsquare = False
+for i in range(int(num ** 0.5) + 1):
+    if i * i == num:
+        perfectsquare = True
+        break
+if perfectsquare:
+    print(num, "is a perfect square.")
+else:
+    print(num, "is not a perfect square.")
