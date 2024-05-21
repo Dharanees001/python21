@@ -1,29 +1,16 @@
-def calculate_grade(mark1, mark2, mark3):
-    average_mark = (mark1 + mark2 + mark3) / 3
-
-    if average_mark >= 90:
-        return 'A'
-    elif 80 <= average_mark < 90:
-        return 'B'
-    elif 70 <= average_mark < 80:
-        return 'C'
-    elif 60 <= average_mark < 70:
-        return 'D'
-    elif 50 <= average_mark < 60:
-        return 'E'
-    else:
-        return 'F'
-
-def main():
-    try:
-        mark1 = int(input("Enter mark for subject 1: "))
-        mark2 = int(input("Enter mark for subject 2: "))
-        mark3 = int(input("Enter mark for subject 3: "))
-
-        grade = calculate_grade(mark1, mark2, mark3)
-        print("Grade:", grade)
-    except ValueError:
-        print("Please enter valid integer marks.")
-
-if __name__ == "__main__":
-    main()
+m1=int(input("Mark in subject1: \n"))
+m2=int(input("Mark in subject2: \n"))
+m3=int(input("Mark in subject3: \n"))
+average=(m1+m2+m3)/3
+if average>=90:
+    print(":) :) Grade A :) :)")
+elif average>=80 and average<90:
+    print("Grade B")
+elif average>=70 and average<80:
+    print("Grade C")
+elif average>=60 and average<70:
+    print("Grade D")
+elif average>=50 and average<60:
+    print("Grade E")
+else:
+    print(":( :( Grade F :( :(")
