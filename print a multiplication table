@@ -1,0 +1,13 @@
+n = 5 
+
+for i in range(1, 11):
+    result = n * i
+    print(n,"*",i,"=",result)
+
+6.print the square of stars
+n = 5  
+
+for i in range(n):
+    for j in range(n):
+        print("*", end="")
+    print()
