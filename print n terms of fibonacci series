@@ -1,0 +1,12 @@
+n = int(input("Enter a number: "))
+
+if n <= 0:
+    print("Invalid input")
+else:
+    a, b = 0, 1
+    for i in range(n):
+        a, b = b, a + b
+    print("Fibonacci series in reverse order:")
+    for i in range(n-1, -1, -1):
+        print(a)
+        a, b = b - a, a
