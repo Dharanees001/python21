@@ -1,0 +1,24 @@
+def find_coincide_time(hours):
+    if hours < 0 or hours >= 12:
+        return "Invalid input"
+    
+    angle_per_minute = 360 / 60
+    angle_per_hour = 360 / 12
+    angle_between_hands = abs((angle_per_hour * hours) - (angle_per_minute * (5 * hours % 60)))
+
+    for minute in range(60):
+        if angle_between_hands == 0:
+            return f"({hours*60 + minute} / 11)"
+        angle_between_hands -= angle_per_minute
+
+    return "No coincide time in next one hour"
+
+def main():
+    try:
+        hours = int(input("Enter time in hours (0-11): "))
+        print(find_coincide_time(hours))
+    except ValueError:
+        print("Invalid input")
+
+if __name__ == "__main__":
+    main()
