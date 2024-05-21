@@ -1,0 +1,9 @@
+n = 10  
+m = 50  
+
+sum= 0
+for i in range(n, m+1):
+    if i % 9 == 0:
+        sum+= i
+
+print(f"The sum of all integers between {n} and {m} that are divisible by 9 is: {sum}")
